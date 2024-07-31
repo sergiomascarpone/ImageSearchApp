@@ -15,7 +15,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 HStack {
-                    TextField("Search...", text: $viewModel.searchText, onCommit: {
+                    TextField("Поиск...", text: $viewModel.searchText, onCommit: {
                         viewModel.searchImages()
                     })
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -24,13 +24,13 @@ struct ContentView: View {
                     Button(action: {
                         viewModel.searchImages()
                     }) {
-                        Text("Search")
+                        Text("Поиск")
                     }
                     .padding()
                 }
                 
                 if viewModel.images.isEmpty {
-                    Text("No images found")
+                    Text("Изображение не найдено")
                         .padding()
                 } else {
                     ScrollView {
@@ -49,7 +49,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationBarTitle("Image Search")
+            .navigationBarTitle("Поиск Изображений")
         }
     }
 }
