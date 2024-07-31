@@ -12,7 +12,7 @@
 		1BE713472C5A273C0045B05C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE713462C5A273C0045B05C /* Assets.xcassets */; };
 		1BE7134A2C5A273C0045B05C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE713492C5A273C0045B05C /* Preview Assets.xcassets */; };
 		1BE713542C5A28160045B05C /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE713532C5A28160045B05C /* ImageModel.swift */; };
-		1BE713562C5A282B0045B05C /* ImageSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE713552C5A282A0045B05C /* ImageSearchModel.swift */; };
+		1BE713562C5A282B0045B05C /* ImageSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE713552C5A282A0045B05C /* ImageSearchViewModel.swift */; };
 		1BE713592C5A28490045B05C /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1BE713582C5A28490045B05C /* URLImage */; };
 		1BE7135B2C5A28490045B05C /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 1BE7135A2C5A28490045B05C /* URLImageStore */; };
 /* End PBXBuildFile section */
@@ -24,7 +24,7 @@
 		1BE713462C5A273C0045B05C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BE713492C5A273C0045B05C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1BE713532C5A28160045B05C /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
-		1BE713552C5A282A0045B05C /* ImageSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchModel.swift; sourceTree = "<group>"; };
+		1BE713552C5A282A0045B05C /* ImageSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 		1BE713512C5A27F10045B05C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				1BE713552C5A282A0045B05C /* ImageSearchModel.swift */,
+				1BE713552C5A282A0045B05C /* ImageSearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 				1BE713452C5A273A0045B05C /* ContentView.swift in Sources */,
 				1BE713542C5A28160045B05C /* ImageModel.swift in Sources */,
 				1BE713432C5A273A0045B05C /* ImageSearchApp.swift in Sources */,
-				1BE713562C5A282B0045B05C /* ImageSearchModel.swift in Sources */,
+				1BE713562C5A282B0045B05C /* ImageSearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
