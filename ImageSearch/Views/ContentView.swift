@@ -5,6 +5,7 @@
 //  Created by Sergio Mascarpone on 31.07.24.
 //
 
+// Основной вью и его настройка/отображение
 import SwiftUI
 import URLImage
 
