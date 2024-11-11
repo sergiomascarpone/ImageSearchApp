@@ -15,6 +15,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Text("Поиск Изображения").font(.largeTitle)
                 HStack {
                     TextField("Введите текст...", text: $viewModel.searchText, onCommit: {
                         viewModel.searchImages()
@@ -54,7 +55,6 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationBarTitle("Поиск Изображения")
         }
     }
 }
