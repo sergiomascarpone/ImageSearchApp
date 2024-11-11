@@ -16,7 +16,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 HStack {
-                    TextField("Поиск...", text: $viewModel.searchText, onCommit: {
+                    TextField("Введите текст...", text: $viewModel.searchText, onCommit: {
                         viewModel.searchImages()
                     })
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -29,10 +29,14 @@ struct ContentView: View {
                     }
                     .padding()
                 }
+                Spacer()
                 
-                if viewModel.images.isEmpty {
-                    Text("Изображение не найдено")
-                        .padding()
+                if $viewModel.images.isEmpty {
+                    Text("Изображение не найдено").font(.title).foregroundColor(.blue).offset(y: -30)
+                    Text("Введите корректный текст для поиска").font(.subheadline).padding(.horizontal, 30).offset(y: -30)
+                        .multilineTextAlignment(.center).lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true).frame(maxWidth: .infinity)
+                    
                 } else {
                     ScrollView {
                         LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], spacing: 10) {
@@ -50,7 +54,13 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationBarTitle("Поиск Изображений")
+            .navigationBarTitle("Поиск Изображения")
         }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
