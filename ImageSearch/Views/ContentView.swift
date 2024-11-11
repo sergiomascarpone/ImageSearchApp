@@ -15,29 +15,38 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Поиск Изображения").font(.largeTitle)
+//                Text("Поиск Изображения")
+//                    .font(.largeTitle)
+//                    .padding(.top)
+                
                 HStack {
-                    TextField("Введите текст...", text: $viewModel.searchText, onCommit: {
-                        viewModel.searchImages()
-                    })
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
+                    TextField("Введите текст...", text: $viewModel.searchText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal)
                     
                     Button(action: {
                         viewModel.searchImages()
                     }) {
                         Text("Поиск")
+                        Image(systemName: "magnifyingglass")
+                            .font(.title2)
                     }
-                    .padding()
+                    .padding(.trailing)
                 }
+                
                 Spacer()
                 
                 if $viewModel.images.isEmpty {
-                    Text("Изображение не найдено").font(.title).foregroundColor(.blue).offset(y: -30)
-                    Text("Введите корректный текст для поиска").font(.subheadline).padding(.horizontal, 30).offset(y: -30)
-                        .multilineTextAlignment(.center).lineLimit(nil)
-                        .fixedSize(horizontal: false, vertical: true).frame(maxWidth: .infinity)
-                    
+                    VStack(spacing: 10) {
+                        Text("Изображение не найдено")
+                            .font(.title)
+                            .foregroundColor(.blue)
+                        
+                        Text("Введите корректный текст для поиска")
+                            .font(.subheadline)
+                            .padding(.horizontal, 30)
+                    }
+                    .padding(.top, 30)
                 } else {
                     ScrollView {
                         LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))], spacing: 10) {
@@ -47,6 +56,7 @@ struct ContentView: View {
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .frame(width: 100, height: 100)
+                                        .cornerRadius(10)
                                         .clipped()
                                 }
                             }
@@ -54,7 +64,10 @@ struct ContentView: View {
                         .padding()
                     }
                 }
+                Spacer()
             }
+            .background(Color(.systemGray6).edgesIgnoringSafeArea(.all)) // Добавляем фон
+            .navigationTitle("Поиск картинок")
         }
     }
 }

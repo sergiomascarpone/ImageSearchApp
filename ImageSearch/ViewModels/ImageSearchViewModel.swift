@@ -15,7 +15,7 @@ class ImageSearchViewModel: ObservableObject {
     
     func searchImages() {
         let accessKey = "xZON2_J1xxcgWyiVsCZe8uwGdAi66YqhJ8crT4cH6Lk" // реальный ключ
-        guard let url = URL(string: "https://api.unsplash.com/search/photos?query=\(searchText)&client_id=\(accessKey)") else {
+        guard let url = URL(string: "https://api.unsplash.com/search/photos?query=\(searchText)&per_page=15&client_id=\(accessKey)") else {
             return
         }
         
