@@ -15,9 +15,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-//                Text("Поиск Изображения")
-//                    .font(.largeTitle)
-//                    .padding(.top)
+                //                Text("Поиск Изображения")
+                //                    .font(.largeTitle)
+                //                    .padding(.top)
                 
                 HStack {
                     TextField("Введите текст...", text: $viewModel.searchText)
